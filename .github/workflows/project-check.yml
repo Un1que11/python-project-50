@@ -12,5 +12,8 @@ jobs:
       - name: Install python
         uses: actions/setup-python@v2
 
+      - name: Install deps
+        run: poetry install
+
       - name: Run lint
-        run: flake8
+        run: poetry run flake8 gendiff
