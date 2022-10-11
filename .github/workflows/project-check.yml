@@ -30,3 +30,6 @@ jobs:
 
       - name: Run lint
         run: poetry run flake8 gendiff
+
+      - name: Run tests
+        run: poetry run pytest -v
