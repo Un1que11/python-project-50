@@ -29,7 +29,15 @@ jobs:
         run: poetry install
 
       - name: Run lint
-        run: poetry run flake8 gendiff
+        run: make lint
 
       - name: Run tests
-        run: poetry run pytest -v --cov
+        run: make test
+
+      - name: Upload code coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+            CC_TEST_REPORTER_ID: 8fed69dab2e1a795ae2c302eeac299f1f38cea14f3d181de4ba6187a7ae4ae12
+        with:
+            coverageCommand: make coverage
+            debug: true

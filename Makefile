@@ -18,3 +18,6 @@ reinstall:
 
 test:
 		poetry run pytest -v
+
+coverage:
+		poetry run pytest --cov
