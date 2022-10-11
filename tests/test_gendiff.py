@@ -7,3 +7,11 @@ def test_gendiff_json():
 
     assert generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json')\
            == expected
+
+
+def test_gendiff_yaml():
+    with open('tests/fixtures/yml_result') as file:
+        expected = file.read()
+
+    assert generate_diff('tests/fixtures/file1.yml', 'tests/fixtures/file2.yml')\
+           == expected
