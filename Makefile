@@ -20,4 +20,4 @@ test:
 		poetry run pytest -v
 
 coverage:
-		poetry run pytest --cov
+		poetry run pytest --cov=gendiff
