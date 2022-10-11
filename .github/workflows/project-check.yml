@@ -35,6 +35,8 @@ jobs:
         run: make test
 
       - name: Upload code coverage
-        uses: paambaati/codeclimate-action@v3.0.0
+        uses: paambaati/codeclimate-action@v2.4.4
+        env:
+            CC_TEST_REPORTER_ID: 8fed69dab2e1a795ae2c302eeac299f1f38cea14f3d181de4ba6187a7ae4ae12
         with:
-            token: 8fed69dab2e1a795ae2c302eeac299f1f38cea14f3d181de4ba6187a7ae4ae12
+            coverageCommand: make coverage
