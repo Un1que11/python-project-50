@@ -9,4 +9,9 @@
 + gendiff (file.json):
 
       gendiff first_file.json second_file.json
-[![asciicast](https://asciinema.org/a/l8rlpqIEXjQd4DLkVAw8RYKc7.svg)](https://asciinema.org/a/l8rlpqIEXjQd4DLkVAw8RYKc7)
+[![asciicast](https://asciinema.org/a/ECfGIFIaGenyvY6s8ksXL1lnq.svg)](https://asciinema.org/a/ECfGIFIaGenyvY6s8ksXL1lnq)
+
++ gendiff (file.yml)
+
+      gendiff first_file.yml second_file.yml
+[![asciicast](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV.svg)](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV)
