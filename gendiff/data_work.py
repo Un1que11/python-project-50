@@ -20,4 +20,3 @@ def bool_format(dictionary):
             dictionary[key] = 'false'
         elif dictionary[key] is True:
             dictionary[key] = 'true'
-
