@@ -1,18 +1,11 @@
-import json
+from gendiff.data_work import file_format, bool_format
+
 import itertools
 
 
-def bool_format(dictionary):
-    for key in dictionary:
-        if dictionary[key] is False:
-            dictionary[key] = 'false'
-        elif dictionary[key] is True:
-            dictionary[key] = 'true'
-
-
 def generate_diff(file1, file2):
-    first_file = json.load(open(f'{file1}'))
-    second_file = json.load(open(f'{file2}'))
+    first_file = file_format(file1)
+    second_file = file_format(file2)
     bool_format(first_file)
     bool_format(second_file)
     keys = first_file.keys() | second_file.keys()
