@@ -4,6 +4,39 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/c6148e823b09f10e7d49/maintainability)](https://codeclimate.com/github/Un1que11/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c6148e823b09f10e7d49/test_coverage)](https://codeclimate.com/github/Un1que11/python-project-50/test_coverage)
 
+# Gendiff
+***
+## Description:
+***
+CLI utilite that shows difference between two JSON or YML files
+## Dependencies:
+***
+
+* python = "^3.10"
+* pytest = "^7.1.3"
+* PyYAML = "^6.0"
+## Usage:
+    usage: gendiff [-h] [-f FORMAT] first_file second_file
+
+    Generate diff
+
+    positional arguments:
+      first_file
+      second_file
+
+    optional arguments:
+      -h, --help            show help message and exit
+      -f, --format          set format of output
+## Installation:
+***
+### Use the package manager pip:
+    pip install --user git+https://github.com/Un1que11/python-project-50.git
+### or 
+### Clone repository and use poetry:
+    git clone https://github.com/Un1que11/python-project-50.git
+    cd python-project-50
+    make build
+    make reinstall
 ## Work process:
 
 + gendiff (file.json):
