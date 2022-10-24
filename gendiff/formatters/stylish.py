@@ -1,9 +1,4 @@
-from gendiff.data_work import file_format, bool_format
-
-import itertools
-
-
-def generate_diff(file1, file2):
+def stylish(file1, file2):
     first_file = file_format(file1)
     second_file = file_format(file2)
     bool_format(first_file)

@@ -4,7 +4,7 @@ import json
 import yaml
 
 
-def file_format(file):
+def open_file(file):
     if Path(file).suffix == '.json':
         with open(f'{file}') as f:
             return json.load(f)
