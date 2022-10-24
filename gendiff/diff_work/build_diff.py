@@ -14,7 +14,7 @@ def create_diff_segment(
         old_value: Any,
         new_value: Any = None,
         children: Union[list, dict] = None
-):
+) -> dict:
 
     return {
         'diff_type': diff_type,
@@ -29,7 +29,7 @@ def create_diff_segments(
         key: str,
         file1: dict,
         file2: dict
-):
+) -> dict:
 
     if key not in file2:
         data_result = create_diff_segment(
@@ -73,7 +73,7 @@ def create_diff_segments(
 def create_diff(
         file1: dict,
         file2: dict
-):
+) -> list:
 
     keys = file1.keys() | file2.keys()
     diff = []
