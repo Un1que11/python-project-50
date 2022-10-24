@@ -1,14 +1,14 @@
 from typing import Any, Final, Union
 
 
-VALUE_DELETED: Final = 'deleted'  # key in first, but no in second
-VALUE_ADDED: Final = 'added'  # key in second, but no in first
-VALUE_CHANGED: Final = 'changed'  # key in first and second, but values different
-VALUE_UNCHANGED: Final = 'unchanged'  # key in first and second and values are the same
+VALUE_DELETED: Final = 'deleted'
+VALUE_ADDED: Final = 'added'
+VALUE_CHANGED: Final = 'changed'
+VALUE_UNCHANGED: Final = 'unchanged'
 VALUE_CHILDREN: Final = 'children'
 
 
-def create_diff_segment(
+def build_diff_segment(
         diff_type: str,
         key: str,
         old_value: Any,
@@ -25,42 +25,42 @@ def create_diff_segment(
     }
 
 
-def create_diff_segments(
+def build_diff_segments(
         key: str,
         file1: dict,
         file2: dict
 ) -> dict:
 
     if key not in file2:
-        data_result = create_diff_segment(
+        data_result = build_diff_segment(
             VALUE_DELETED,
             key,
             file1[key]
         )
     elif key not in file1:
-        data_result = create_diff_segment(
+        data_result = build_diff_segment(
             VALUE_ADDED,
             key,
             file2[key]
         )
     elif isinstance(file1[key], dict) and isinstance(file2[key], dict):
-        data_result = create_diff_segment(
+        data_result = build_diff_segment(
             VALUE_CHILDREN,
             key,
             old_value=None,
-            children=create_diff(
+            children=build_diff(
                 file1[key],
                 file2[key]
             )
         )
     elif file1[key] == file2[key]:
-        data_result = create_diff_segment(
+        data_result = build_diff_segment(
             VALUE_UNCHANGED,
             key,
             file1[key]
         )
     else:
-        data_result = create_diff_segment(
+        data_result = build_diff_segment(
             VALUE_CHANGED,
             key,
             file1[key],
@@ -70,7 +70,7 @@ def create_diff_segments(
     return data_result
 
 
-def create_diff(
+def build_diff(
         file1: dict,
         file2: dict
 ) -> list:
@@ -78,5 +78,5 @@ def create_diff(
     keys = file1.keys() | file2.keys()
     diff = []
     for key in sorted(keys):
-        diff.append(create_diff_segments(key, file1, file2))
+        diff.append(build_diff_segments(key, file1, file2))
     return diff
