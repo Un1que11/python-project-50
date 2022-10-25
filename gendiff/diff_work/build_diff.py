@@ -43,6 +43,12 @@ def build_diff_segments(
             key,
             file2[key]
         )
+    elif file1[key] == file2[key]:
+        data_result = build_diff_segment(
+            VALUE_UNCHANGED,
+            key,
+            file1[key]
+        )
     elif isinstance(file1[key], dict) and isinstance(file2[key], dict):
         data_result = build_diff_segment(
             VALUE_CHILDREN,
@@ -52,12 +58,6 @@ def build_diff_segments(
                 file1[key],
                 file2[key]
             )
-        )
-    elif file1[key] == file2[key]:
-        data_result = build_diff_segment(
-            VALUE_UNCHANGED,
-            key,
-            file1[key]
         )
     else:
         data_result = build_diff_segment(

@@ -20,3 +20,9 @@ def bool_format(dictionary):
             dictionary[key] = 'false'
         elif dictionary[key] is True:
             dictionary[key] = 'true'
+
+
+def null_format(dictionary):
+    for key in dictionary:
+        if dictionary[key] is None:
+            dictionary[key] = 'null'
