@@ -2,7 +2,7 @@ from gendiff.diff_work.generate_diff import generate_diff
 
 
 def test_gendiff_json():
-    with open('tests/fixtures/json_result') as file:
+    with open('tests/fixtures/json_result.txt') as file:
         expected = file.read()
 
     assert generate_diff('tests/fixtures/file1.json', 'tests/fixtures/file2.json')\
@@ -10,7 +10,7 @@ def test_gendiff_json():
 
 
 def test_gendiff_yaml():
-    with open('tests/fixtures/yml_result') as file:
+    with open('tests/fixtures/yml_result.txt') as file:
         expected = file.read()
 
     assert generate_diff('tests/fixtures/file1.yml', 'tests/fixtures/file2.yml')\
@@ -18,7 +18,7 @@ def test_gendiff_yaml():
 
 
 def test_gendiff_tree_json():
-    with open('tests/fixtures/json_tree_result') as file:
+    with open('tests/fixtures/json_tree_result.txt') as file:
         expected = file.read()
 
     assert generate_diff('tests/fixtures/file1_tree.json',
@@ -27,7 +27,7 @@ def test_gendiff_tree_json():
 
 
 def test_gendiff_tree_yml():
-    with open('tests/fixtures/yml_tree_result') as file:
+    with open('tests/fixtures/yml_tree_result.txt') as file:
         expected = file.read()
 
     assert generate_diff('tests/fixtures/file1_tree.yml',
