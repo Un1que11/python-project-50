@@ -13,7 +13,8 @@ def main():
         '-f',
         '--format',
         type=str,
-        help='set format of output'
+        help='set format of output',
+        default='stylish'
     )
 
     args = parser.parse_args()
