@@ -35,12 +35,22 @@ CLI utilite that shows difference between two JSON or YML files
     make reinstall
 ## Work process:
 
-+ gendiff (file.json):
++ file.json:
 
       gendiff first_file.json second_file.json
 [![asciicast](https://asciinema.org/a/ECfGIFIaGenyvY6s8ksXL1lnq.svg)](https://asciinema.org/a/ECfGIFIaGenyvY6s8ksXL1lnq)
 
-+ gendiff (file.yml)
++ file.yml:
 
       gendiff first_file.yml second_file.yml
 [![asciicast](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV.svg)](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV)
+
++ file_tree.json
+
+      gendiff first_file_tree.json second_file_tree.json
+[![asciicast](https://asciinema.org/a/zLDpgoDtVnSwO4XwIXq01OzFR.svg)](https://asciinema.org/a/zLDpgoDtVnSwO4XwIXq01OzFR)
+
++ file_tree.yml
+
+      gendiff first_file_tree.yml second_file_tree.yml
+[![asciicast](https://asciinema.org/a/2JySdhjG2c6KvcrhMHbBw0NRi.svg)](https://asciinema.org/a/2JySdhjG2c6KvcrhMHbBw0NRi)
