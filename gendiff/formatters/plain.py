@@ -10,7 +10,10 @@ TEMPLATE_REMOVED = "Property '{}' was removed"
 TEMPLATE_UPDATED = "Property '{}' was updated. From {} to {}"
 
 
-def plain(diff, key_list=[]):
+def plain(
+        diff: list,
+        key_list: list = []
+) -> str:
     collected_data = list()
 
     for node in diff:
@@ -40,7 +43,9 @@ def plain(diff, key_list=[]):
     return '\n'.join(collected_data)
 
 
-def value_format(value):
+def value_format(
+        value: str
+) -> str:
     if isinstance(value, dict):
         value = '[complex value]'
     elif isinstance(value, bool):

@@ -4,7 +4,9 @@ import json
 import yaml
 
 
-def open_file(file):
+def open_file(
+        file: str
+) -> dict:
     if Path(file).suffix == '.json':
         with open(f'{file}') as f:
             return json.load(f)
@@ -14,7 +16,9 @@ def open_file(file):
             return yaml.safe_load(f)
 
 
-def bool_format(dictionary):
+def bool_format(
+        dictionary: dict
+):
     for key in dictionary:
         if dictionary[key] is False:
             dictionary[key] = 'false'
@@ -22,7 +26,9 @@ def bool_format(dictionary):
             dictionary[key] = 'true'
 
 
-def null_format(dictionary):
+def null_format(
+        dictionary: dict
+):
     for key in dictionary:
         if dictionary[key] is None:
             dictionary[key] = 'null'

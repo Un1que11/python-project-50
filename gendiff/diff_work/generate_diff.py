@@ -6,7 +6,8 @@ from gendiff.diff_work.build_diff import build_diff
 def generate_diff(
         file1: str,
         file2: str,
-        style='stylish') -> str:
+        style='stylish'
+) -> str:
 
     first_file = open_file(file1)
     second_file = open_file(file2)

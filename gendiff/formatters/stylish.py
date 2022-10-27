@@ -7,7 +7,10 @@ from gendiff.diff_work.build_diff import \
     VALUE_CHILDREN
 
 
-def stylish(diff, depth=1):
+def stylish(
+        diff: list,
+        depth: int = 1
+) -> str:
     collected_data = list()
     spaces = 4 * depth - 2
     indent = ' ' * spaces
@@ -43,7 +46,10 @@ def stylish(diff, depth=1):
     return '\n'.join(result)
 
 
-def value_format(value, depth):
+def value_format(
+        value: str,
+        depth: int
+) -> str:
     collected_data = list()
     spaces = 4 * depth - 2
     indent = ' ' * spaces
