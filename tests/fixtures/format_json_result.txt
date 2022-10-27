@@ -1,0 +1,148 @@
+[
+    {
+        "diff_type": "children",
+        "key": "common",
+        "old_value": null,
+        "new_value": null,
+        "children": [
+            {
+                "diff_type": "added",
+                "key": "follow",
+                "old_value": false,
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "unchanged",
+                "key": "setting1",
+                "old_value": "Value 1",
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "deleted",
+                "key": "setting2",
+                "old_value": 200,
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "changed",
+                "key": "setting3",
+                "old_value": true,
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "added",
+                "key": "setting4",
+                "old_value": "blah blah",
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "added",
+                "key": "setting5",
+                "old_value": {
+                    "key5": "value5"
+                },
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "children",
+                "key": "setting6",
+                "old_value": null,
+                "new_value": null,
+                "children": [
+                    {
+                        "diff_type": "children",
+                        "key": "doge",
+                        "old_value": null,
+                        "new_value": null,
+                        "children": [
+                            {
+                                "diff_type": "changed",
+                                "key": "wow",
+                                "old_value": "",
+                                "new_value": "so much",
+                                "children": null
+                            }
+                        ]
+                    },
+                    {
+                        "diff_type": "unchanged",
+                        "key": "key",
+                        "old_value": "value",
+                        "new_value": null,
+                        "children": null
+                    },
+                    {
+                        "diff_type": "added",
+                        "key": "ops",
+                        "old_value": "vops",
+                        "new_value": null,
+                        "children": null
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "diff_type": "children",
+        "key": "group1",
+        "old_value": null,
+        "new_value": null,
+        "children": [
+            {
+                "diff_type": "changed",
+                "key": "baz",
+                "old_value": "bas",
+                "new_value": "bars",
+                "children": null
+            },
+            {
+                "diff_type": "unchanged",
+                "key": "foo",
+                "old_value": "bar",
+                "new_value": null,
+                "children": null
+            },
+            {
+                "diff_type": "changed",
+                "key": "nest",
+                "old_value": {
+                    "key": "value"
+                },
+                "new_value": "str",
+                "children": null
+            }
+        ]
+    },
+    {
+        "diff_type": "deleted",
+        "key": "group2",
+        "old_value": {
+            "abc": 12345,
+            "deep": {
+                "id": 45
+            }
+        },
+        "new_value": null,
+        "children": null
+    },
+    {
+        "diff_type": "added",
+        "key": "group3",
+        "old_value": {
+            "deep": {
+                "id": {
+                    "number": 45
+                }
+            },
+            "fee": 100500
+        },
+        "new_value": null,
+        "children": null
+    }
+]
