@@ -56,8 +56,6 @@ def value_format(value, depth):
         collected_data.append(str(value).lower())
     elif value is None:
         collected_data.append('null')
-    elif value == ' ""':
-        return None
     else:
         return str(value)
 
