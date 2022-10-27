@@ -45,12 +45,17 @@ CLI utilite that shows difference between two JSON or YML files
       gendiff first_file.yml second_file.yml
 [![asciicast](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV.svg)](https://asciinema.org/a/JGSPTyWj8fRAA3RYg9BtDC6ZV)
 
-+ file_tree.json
++ file_tree.json (format stylish):
 
       gendiff first_file_tree.json second_file_tree.json
 [![asciicast](https://asciinema.org/a/zLDpgoDtVnSwO4XwIXq01OzFR.svg)](https://asciinema.org/a/zLDpgoDtVnSwO4XwIXq01OzFR)
 
-+ file_tree.yml
++ file_tree.yml (format stylish):
 
       gendiff first_file_tree.yml second_file_tree.yml
 [![asciicast](https://asciinema.org/a/2JySdhjG2c6KvcrhMHbBw0NRi.svg)](https://asciinema.org/a/2JySdhjG2c6KvcrhMHbBw0NRi)
+
++ format plain:
+
+      gendiff --format plain file1.json file2.json
+[![asciicast](https://asciinema.org/a/jKZyjFVZ0yloca7q0om1Yj2UD.svg)](https://asciinema.org/a/jKZyjFVZ0yloca7q0om1Yj2UD)
