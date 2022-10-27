@@ -8,7 +8,6 @@
 ## Description:
 CLI utilite that shows difference between two JSON or YML files
 ## Dependencies:
-
 * python = "^3.10"
 * pytest = "^7.1.3"
 * PyYAML = "^6.0"
