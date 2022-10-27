@@ -59,3 +59,8 @@ CLI utilite that shows difference between two JSON or YML files
 
       gendiff --format plain file1.json file2.json
 [![asciicast](https://asciinema.org/a/jKZyjFVZ0yloca7q0om1Yj2UD.svg)](https://asciinema.org/a/jKZyjFVZ0yloca7q0om1Yj2UD)
+
++ format json:
+
+      gendiff --format json file1.json file2.json
+[![asciicast](https://asciinema.org/a/KlLDl5aBKJ76oAKHoIoVD9kYv.svg)](https://asciinema.org/a/KlLDl5aBKJ76oAKHoIoVD9kYv)
