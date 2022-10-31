@@ -1,12 +1,17 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
-authors = ["Mikhail Orlov <crazyminer398@gmail.com>"]
+description = "CLI utilite that make diff between two files"
+classifiers = [
+    "Development Status :: 4 - Beta",
+	"Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+authors = ["Mikhail <crazyminer398@gmail.com>"]
 packages = [
   { include = "gendiff" },
 ]
-
+repository = "https://github.com/Un1que11/python-project-50.git"
 
 [tool.poetry.dependencies]
 python = "^3.10"
