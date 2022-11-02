@@ -1,5 +1,5 @@
-from gendiff.formatters.stylish import stylish
-from gendiff.formatters.plain import plain
+from gendiff.formatters.stylish import run_stylish
+from gendiff.formatters.plain import run_plain
 from gendiff.formatters.json import json_build
 
 
@@ -8,8 +8,8 @@ def style_format(
         style: str
 ) -> str:
     if style == 'stylish':
-        return stylish(diff)
+        return run_stylish(diff)
     elif style == 'json':
         return json_build(diff)
     else:
-        return plain(diff)
+        return run_plain(diff)

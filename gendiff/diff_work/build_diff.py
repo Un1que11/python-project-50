@@ -27,56 +27,53 @@ def build_diff_segment(
 
 def build_diff_segments(
         key: str,
-        file1: dict,
-        file2: dict
+        data1: dict,
+        data2: dict
 ) -> dict:
 
-    if key not in file2:
+    if key not in data2:
         data_result = build_diff_segment(
             VALUE_DELETED,
             key,
-            file1[key]
+            data1[key]
         )
-    elif key not in file1:
+    elif key not in data1:
         data_result = build_diff_segment(
             VALUE_ADDED,
             key,
-            file2[key]
+            data2[key]
         )
-    elif file1[key] == file2[key]:
+    elif data1[key] == data2[key]:
         data_result = build_diff_segment(
             VALUE_UNCHANGED,
             key,
-            file1[key]
+            data1[key]
         )
-    elif isinstance(file1[key], dict) and isinstance(file2[key], dict):
+    elif isinstance(data1[key], dict) and isinstance(data2[key], dict):
         data_result = build_diff_segment(
             VALUE_CHILDREN,
             key,
             old_value=None,
-            children=build_diff(
-                file1[key],
-                file2[key]
-            )
+            children=build_diff(data1[key], data2[key])
         )
     else:
         data_result = build_diff_segment(
             VALUE_CHANGED,
             key,
-            file1[key],
-            file2[key]
+            data1[key],
+            data2[key]
         )
 
     return data_result
 
 
 def build_diff(
-        file1: dict,
-        file2: dict
+        data1: dict,
+        data2: dict
 ) -> list:
 
-    keys = file1.keys() | file2.keys()
+    keys = data1.keys() | data2.keys()
     diff = []
     for key in sorted(keys):
-        diff.append(build_diff_segments(key, file1, file2))
+        diff.append(build_diff_segments(key, data1, data2))
     return diff

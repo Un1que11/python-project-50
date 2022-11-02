@@ -12,9 +12,10 @@ TEMPLATE_UPDATED = "Property '{}' was updated. From {} to {}"
 
 def plain(
         diff: list,
-        key_list: list = []
+        key_list: list = None
 ) -> str:
     collected_data = list()
+    key_list = list() if key_list is None else key_list
 
     for node in diff:
 
@@ -55,3 +56,9 @@ def value_format(
     elif value is None:
         value = 'null'
     return value
+
+
+def run_plain(
+        diff: list
+) -> str:
+    return plain(diff)

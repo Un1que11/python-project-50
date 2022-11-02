@@ -67,3 +67,9 @@ def value_format(
 
     result = chain('{', collected_data, [' ' * (spaces - 2) + '}'])
     return '\n'.join(result)
+
+
+def run_stylish(
+        diff: list
+) -> str:
+    return stylish(diff)

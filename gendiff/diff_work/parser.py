@@ -9,4 +9,7 @@ def parse(
 ) -> dict:
     if file_format == 'json':
         return json.loads(file_data)
-    return yaml.safe_load(file_data)
+    elif file_format == 'yml':
+        return yaml.safe_load(file_data)
+    else:
+        raise NameError("Please specify the correct file format.")
